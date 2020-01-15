@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-boot-k8s-recipes
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        mode: event
+      config:
+        sources:
+          - name: ${spring.application.name}
+        namespace:

@@ -1,0 +1,8 @@
+management:
+  endpoint:
+      health:
+        enabled: true
+      metrics:
+        enabled: true
+      restart:
+        enabled: true
