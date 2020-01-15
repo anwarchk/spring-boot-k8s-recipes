@@ -8,7 +8,7 @@
 hs_err_pid*
 
 target/
-.idea
+.idea/
 .Ds
 
 pom.xml.tag
@@ -19,3 +19,5 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+
+*.iml

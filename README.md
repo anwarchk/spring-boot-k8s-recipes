@@ -170,6 +170,31 @@ Notes:
 - Properties under *spring.cloud.kubernetes.reload.** should not be used in config maps or secrets: changing such properties at runtime may lead to unexpected results;
 - Deleting a property or the whole config map does not restore the original state of the beans when using the *refresh* level.
 
+### Service Discovery
+
+The `ServiceDiscovery` feature allows you to query Kubernetes endpoints *(see [services](http://kubernetes.io/docs/user-guide/services/))* by name.
+To get make this work, add the following dependency inside your project:
+
+```xml
+<dependency>
+    <groupId>io.fabric8</groupId>
+    <artifactId>spring-cloud-starter-kubernetes</artifactId>
+    <version>${latest.version}</version>
+</dependency>
+```
+
+Then you can inject the client in your cloud simply by:
+
+```java
+@Autowired
+private DiscoveryClient discoveryClient;
+```
+
+If for any reason you need to disable the `DiscoveryClient` you can simply set the following property:
+
+```
+spring.cloud.kubernetes.discovery.enabled=false
+```
 
 ### Pod Health Indicator
 

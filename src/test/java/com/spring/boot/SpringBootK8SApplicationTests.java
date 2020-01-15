@@ -12,5 +12,4 @@ public class SpringBootK8SApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
